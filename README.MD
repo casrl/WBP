@@ -13,4 +13,4 @@ Our work can be cited using the following information.
   booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
   year={2024},
   organization={Springer}
-              }
+ }
