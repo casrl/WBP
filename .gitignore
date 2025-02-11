@@ -7,7 +7,6 @@ figure/
 final_results/
 pytorch-cifar/
 Results/
-saved_file/
 saved_model/
 slurm/
 SlurmResults/
