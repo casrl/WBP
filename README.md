@@ -1,4 +1,4 @@
-# DeepVenom: Hardware Fault-based DNN Backdoor Attack during Training
+# WBP: Training-time Backdoor Attacks through Hardware-based Weight Bit Poisoning
 
 WBP is a research project focused on demonstrating a hardware fault-based backdoor attack on deep neural networks (DNN) during the training stage, specifically targeting the fine-tuning process. The attack can compromise the security of ML systems even when dataset/model sources are trusted. This attack method takes advantage of hardware vulnerabilities, such as transient faults, to inject backdoors into DNN models.
 
