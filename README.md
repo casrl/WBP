@@ -1,13 +1,13 @@
 # WBP: Training-time Backdoor Attacks through Hardware-based Weight Bit Poisoning
 
-WBP is a research project focused on demonstrating a hardware fault-based backdoor attack on deep neural networks (DNN) during the training stage, specifically targeting the fine-tuning process. The attack can compromise the security of ML systems even when dataset/model sources are trusted. This attack method takes advantage of hardware vulnerabilities, such as transient faults, to inject backdoors into DNN models.
+WBP (i.e., **W**eight **B**it **P**oisoning) is a novel *task-agnostic backdoor attack* that manifests during the victim’s training time (i.e., fine-tuning from a public and clean PTM) by inducing hardware-based weight bit flips (using rowhammer). The attack allows an adversary to generate *ONE set of bit flips* that can trojan all downstream models fine-tuned with the same PTM, without the requirement to know the downstream tasks or dataset. Essentially, this attack demonstrates that weight perturbations can also transfer. WBP utilizes a distance-aware algorithm that identifies bit flips to maximize the distance between the distribution of poisoned output representations (ORs) and clean ORs based on the public PTM. The evaluation demonstrates that WBP can compromise a wide range of PTMs and downstream tasks with an average 99.3% attack success rate by flipping as few as 11 model weight bits. 
 
 ## Overview
 
 Machine learning models, particularly DNNs, are increasingly adopted across various application domains. Ensuring the security and trustworthiness of these models is crucial. WBP showcases a novel method of exploiting the fine-tuning process to inject backdoors into DNN models, even when both data and models are trusted.
 
 <p align="center">
-  <img src="overview.png" alt="WBP Overview" width="90%">
+  <img src="overview.png" alt="WBP Overview" width="60%">
 </p>
 
 <p align="center"><em>Figure 1: Overview of the WBP attack pipeline.</em></p>
