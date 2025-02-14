@@ -9,7 +9,6 @@ pytorch-cifar/
 Results/
 saved_model/
 slurm/
-SlurmResults/
 vgg-face.pytorch/
 vgg_face_torch/
 checkpoints/
