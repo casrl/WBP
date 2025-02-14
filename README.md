@@ -32,7 +32,7 @@ Key aspects of WBP:
 - **bit_reduction.py**: Implements the progressive bit reduction algorithm.
 - **ImageManager.py**: Aims to synthesize and manage triggered samples.
 - **loss.py**: Trigger loss, backdoor loss for searching bit flips
-- **main.py**: The main file for running the DeepVenom attack (including both offline and online stages).
+- **main.py**: The main file for running the WBP attack (including both offline and online stages).
 - **model.py**: Models used in our experiments.
 - **run_script.py**: A Python script to run major experiments
 - **utils.py**: All related functions
@@ -41,8 +41,7 @@ Key aspects of WBP:
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/DeepVenom.git
-cd DeepVenom/attack_algorithm
+git clone https://github.com/casrl/WBP
 ```
 ## Data preparation
 
