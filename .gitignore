@@ -18,6 +18,6 @@ jupyter/
 Reyad_Model/
 PTMAttack_MMD.sh
 rebuttal/
-system_exploits/LICWENSE
-system_exploits/README.md
-system_exploits/attack_algorithm/
+# Ignore all files and directories in the submodule except for system_exploits
+/system_exploits/*
+!/system_exploits/.git
