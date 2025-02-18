@@ -27,6 +27,7 @@ Key aspects of WBP:
 - **saved_file**: Directory for saving intermediate and final results.
 - **SlurmResults**: Directory for logs.
 - **bitflip & trigger**: Directory for saving bitflips and trigger.
+- **system_exploits**: contains a set of tools to carry out the system-level attack (including the Weight Tensor side channel and rowhammer utility functions). Cited from [DeepVenom](https://github.com/casrl/DeepVenom)
 - **dataloader.py**: Dataset used in our paper.
 - **wbp_kernel.py**: Implements the main attack algorithm (**offline stage**).
 - **bit_reduction.py**: Implements the progressive bit reduction algorithm.
