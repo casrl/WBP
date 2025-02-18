@@ -41,8 +41,8 @@ Key aspects of WBP:
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/DeepVenom.git
-cd DeepVenom/attack_algorithm
+git clone https://github.com/casrl/WBP
+cd WBP
 ```
 ## Data preparation
 
