@@ -1,13 +1,13 @@
 # WBP: Training-time Backdoor Attacks through Hardware-based Weight Bit Poisoning
 
-WBP (i.e., **W**eight **B**it **P**oisoning) is a novel *task-agnostic backdoor attack* that manifests during the victim’s training time (i.e., fine-tuning from a public and clean PTM) by inducing hardware-based weight bit flips (using rowhammer). The attack allows an adversary to generate *ONE set of bit flips* that can trojan all downstream models fine-tuned with the same PTM, without the requirement to know the downstream tasks or dataset. Essentially, this attack demonstrates that weight perturbations can also transfer. WBP utilizes a distance-aware algorithm that identifies bit flips to maximize the distance between the distribution of poisoned output representations (ORs) and clean ORs based on the public PTM. The evaluation demonstrates that WBP can compromise a wide range of PTMs and downstream tasks with an average 99.3% attack success rate by flipping as few as 11 model weight bits. 
+WBP is a research project focused on demonstrating a hardware fault-based backdoor attack on deep neural networks (DNN) during the training stage, specifically targeting the fine-tuning process. The attack can compromise the security of ML systems even when dataset/model sources are trusted. This attack method takes advantage of hardware vulnerabilities, such as transient faults, to inject backdoors into DNN models.
 
 ## Overview
 
 Machine learning models, particularly DNNs, are increasingly adopted across various application domains. Ensuring the security and trustworthiness of these models is crucial. WBP showcases a novel method of exploiting the fine-tuning process to inject backdoors into DNN models, even when both data and models are trusted.
 
 <p align="center">
-  <img src="overview.png" alt="WBP Overview" width="60%">
+  <img src="overview.png" alt="WBP Overview" width="90%">
 </p>
 
 <p align="center"><em>Figure 1: Overview of the WBP attack pipeline.</em></p>
@@ -32,7 +32,7 @@ Key aspects of WBP:
 - **bit_reduction.py**: Implements the progressive bit reduction algorithm.
 - **ImageManager.py**: Aims to synthesize and manage triggered samples.
 - **loss.py**: Trigger loss, backdoor loss for searching bit flips
-- **main.py**: The main file for running the WBP attack (including both offline and online stages).
+- **main.py**: The main file for running the DeepVenom attack (including both offline and online stages).
 - **model.py**: Models used in our experiments.
 - **run_script.py**: A Python script to run major experiments
 - **utils.py**: All related functions
@@ -41,7 +41,8 @@ Key aspects of WBP:
 ## Installation
 
 ```bash
-git clone https://github.com/casrl/WBP
+git clone https://github.com/yourusername/DeepVenom.git
+cd DeepVenom/attack_algorithm
 ```
 ## Data preparation
 
@@ -77,3 +78,13 @@ wget https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/GTSRB_
       ```bash
       nohup python -u run_script.py --attack_type remote_finetune --inherit_slurm 'xxx' >> nohup.out &  
       ```
+More information about DeepVenom can be found in our [paper](https://casrl.ece.ucf.edu/wp-content/uploads/2024/07/2024_ECCV_WBP.pdf) in European Conference on Computer Vision, 2024. Our work can be cited using the following information.
+## Citing our paper  
+```bibtex
+@inproceedings{wbp,
+  title={WBP: Training-Time Backdoor Attacks Through Hardware-Based Weight Bit Poisoning},
+  author={Cai, Kunbei and Zhang, Zhenkai and Lou, Qian and Yao, Fan},
+  booktitle={European Conference on Computer Vision},
+  year={2024},
+  organization={Springer}
+}
